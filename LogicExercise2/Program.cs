@@ -10,6 +10,7 @@ for (int x = 1; x <= n; x++)
         Console.Write("jazz");
     if(x % 3 != 0 && x % 5 != 0 && x % 7 != 0)
         Console.Write(x);
-    Console.WriteLine();
+    if(x != n)
+        Console.Write(", ");
 }
 
