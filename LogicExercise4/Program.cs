@@ -4,9 +4,16 @@ tes.AddRules(7, "jazz");
 tes.AddRules(9, "huzz");
 tes.AddRules(4, "baz");
 tes.AddRules(5, "bar");
+tes.AddRules(6, "qux");
 
 tes.DisplayRules();
+
+tes.RemoveRules(6);
+tes.DisplayRules();
+
 tes.RunRules(20);
+tes.AllString();
+tes.AllInt();
 
 
 
@@ -61,6 +68,42 @@ public class LogicExerciseClass
                 Console.Write(", ");
             }
         }
+        Console.WriteLine("\n");
+    }
+
+    public void AllString()
+    {
+        int i =0;
+
+        Console.WriteLine("All String:");
+        foreach(var rule in rules)
+        {
+            Console.Write(rule.Value);
+
+            if (i < rules.Count-1)
+            {
+                Console.Write(", ");
+            }
+            i++;
+        }
+        Console.WriteLine("\n");
+    }
+    public void AllInt()
+    {
+        int i =0;
+
+        Console.WriteLine("All Int:");
+        foreach(var rule in rules)
+        {
+            Console.Write(rule.Key);
+
+            if (i < rules.Count-1)
+            {
+                Console.Write(", ");
+            }
+            i++;
+        }
+        Console.WriteLine("\n");
     }
 }
     
